@@ -1,4 +1,5 @@
 # Deadlift Classification Prototype
+A prototype app developed in an attempt to differentiate between the deadlift styles of conventional, Romanian, and sumo, while also evaluating execution form between the classes of correct, early hip elevation, back overextension, and rounded back. 
 
 Requirements:
 - Python version 3.9 was used to be compatible with keras and tensorflow versions 2.10.0 (windows GPU compatability for machine learning was deprecated past this version). This was solely for GPU accelerated machine learning and app code may function with different versions of keras and tensorflow. 

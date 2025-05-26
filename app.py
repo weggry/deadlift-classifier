@@ -62,10 +62,6 @@ gemini_text_thickness = 2
 line_spacing = 30
 y_offset = 150 # Starting pos of gemini feedback
 
-# Get video properties
-fps_start = time.time()
-frame_count = 0
-
 # Recording logic
 start_threshold = 85 # Less than this triggers record start (and also stop after top_threshold is reached)
 top_threshold = 160 # Hip angle needs to surpass this before angles drop below end_threshold
@@ -96,11 +92,6 @@ while cap.isOpened():
     if not ret:
         print("Error: Could not read frame.")
         break
-
-    frame_count += 1
-    elapsed_time = time.time() - fps_start
-    if elapsed_time > 0:
-        estimated_fps = frame_count / elapsed_time
 
     movenet_input_image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     movenet_input_image = tf.image.resize_with_pad(movenet_input_image, input_size, input_size)

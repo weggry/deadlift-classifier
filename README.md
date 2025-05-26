@@ -6,9 +6,17 @@ Requirements:
 - Webcam for the app to function.
 - Gemini LLM requires a private API key to function. My own personal API key is removed from the app code. See https://ai.google.dev/api?lang=python to get and provide a private API key for the API_key variable if you want to test the code. 
 
-Notes:
-- App.py is the main app script.
-- Utils.py contains functions for MoveNet Thunder inference, recorder logic and interpolation of keypoint arrays which are loaded into App.py.
+Contents:
+- MoveNet Models contains Google's MoveNet Thunder and Lightning models for human pose estimation and keypoint generation. See https://www.tensorflow.org/hub/tutorials/movenet for more information.
+- app.py is the main app script.
+- utils.py contains functions for MoveNet Thunder inference, recorder logic and interpolation of keypoint arrays which are loaded into app.py.
+- KPS Annotated MP4 Videos are the deadlift clips WITH keypoint and vector overlay generated with MoveNet Thunder Model.
+- KPS arrays are the raw keypoint generated values generated with MoveNet Thunder model.
+- Raw MP4 Videos are the raw video clips of deadlift executions.
+- Base Classifications/LSTM Base Classification contains a jupyter notebook file from LSTM base classification training, the saved training history in the form of a pickle file, and the saved model itself.
+- Subclass Conv Classifications/LSTM Conv Subclass Classification contains a jupyter notebook file from LSTM Conventional subclass training, the saved training history, and the saved model.
+- Subclass Romanian Classifications/LSTM R Subclass Classification contains a jupyter notebook file from LSTM Romanian subclass training, the saved training history, and the saved model.
+- Subclass Sumo Classifications/LSTM S Subclass Classifications contains a jupyter notebook file from LSTM Sumo subclass training, the saved training history, and the saved model. 
 
 How to run app:
 1. Start your python environment.

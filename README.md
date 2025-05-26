@@ -2,7 +2,7 @@
 
 Requirements:
 - Python version 3.9 was used to be compatible with keras and tensorflow versions 2.10.0 (windows GPU compatability for machine learning was deprecated past this version). This was solely for GPU accelerated machine learning and app code may function with different versions of keras and tensorflow. 
-- All required libraries are listed in "requirements.txt" of the Code folder.
+- All required libraries are listed in "requirements.txt".
 - Webcam for the app to function.
 - Gemini LLM requires a private API key to function. My own personal API key is removed from the app code. See https://ai.google.dev/api?lang=python to get and provide a private API key for the API_key variable if you want to test the code. 
 

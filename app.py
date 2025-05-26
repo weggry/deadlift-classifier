@@ -1,11 +1,9 @@
 import tensorflow as tf
 import keras
 import numpy as np
-
-#matplotlib.use("TkAgg")  # Enables GUI window popups for plots
-# Video handling
 import cv2
 import time
+import os
 
 # Import utility functions for MoveNet Inference and Angle Calculations
 from utils import movenet, run_inference, init_crop_region, determine_crop_region, draw_prediction_on_image
@@ -20,8 +18,6 @@ import textwrap
 
 # Initialize the TFLite interpreter
 input_size = 256 # 192 for lightning, 256 for thunder
-
-import os
 
 model_path = os.path.join(os.path.dirname(__file__), "MoveNet Models", "singlepose_thunder_tflite_f16.tflite")
 interpreter = tf.lite.Interpreter(model_path)
@@ -92,7 +88,7 @@ def retrieve_frames(frames_for_gif):
    return selected
 
 
-# Initial crop region
+# Initial MoveNet Keypoint Generation crop region
 crop_region = init_crop_region(frame_height, frame_width)
 
 while cap.isOpened():
